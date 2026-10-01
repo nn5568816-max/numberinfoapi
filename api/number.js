@@ -13,8 +13,8 @@ export default async function handler(req, res) {
     return res.status(400).json({
       status: "error",
       message: "number parameter required",
-      developer: "Naresh",
-      github: "https://github.com/nn5568816-max/lookup0sint/tree/main"
+      developer: "Aditya",
+      youtube: "https://youtube.com/@YourChannelHere"
     });
   }
 
@@ -22,16 +22,16 @@ export default async function handler(req, res) {
     return res.status(401).json({
       status: "error",
       message: "key required",
-      developer: "Naresh",
-      github: "https://github.com/nn5568816-max/lookup0sint/tree/main"
+      developer: "Aditya",
+      youtube: "https://youtube.com/@YourChannelHere"
     });
   }
 
-  if (!key.startsWith('NARESH-')) {
+  if (!key.startsWith('ADITYA-')) {
     return res.status(401).json({
       status: "error",
       message: "invalid key",
-      developer: "Naresh"
+      developer: "Aditya"
     });
   }
 
@@ -45,15 +45,15 @@ export default async function handler(req, res) {
       status: data.status || "success",
       number: data.number || number,
       data: data.data || null,
-      developer: "Naresh",
-      github: "https://github.com/nn5568816-max/lookup0sint/tree/main"
+      developer: "Aditya",
+      youtube: "https://youtube.com/@YourChannelHere"
     });
   } catch (err) {
     return res.status(500).json({
       status: "error",
       message: "upstream fetch failed",
-      developer: "Naresh",
-      github: "https://github.com/nn5568816-max/lookup0sint/tree/main"
+      developer: "Aditya",
+      youtube: "https://youtube.com/@YourChannelHere"
     });
   }
 }
